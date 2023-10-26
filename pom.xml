@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/project/b6c68962-b678-46e6-a5ba-ff5a7e5b324e -->
     <groupId>com.upsilon.onboarding</groupId>
-    <artifactId>my-app</artifactId>
-    <name>my-app</name>
+    <artifactId>client-onboarding</artifactId>
+    <name>Client Onboarding</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 

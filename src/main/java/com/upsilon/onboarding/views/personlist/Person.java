@@ -1,4 +1,4 @@
-package com.upsilon.onboarding.views.cardlist;
+package com.upsilon.onboarding.views.personlist;
 
 public class Person {
 

@@ -3,7 +3,7 @@ package com.upsilon.onboarding.data;
 import jakarta.persistence.Entity;
 
 @Entity
-public class SampleAddress extends AbstractEntity {
+public class Address extends AbstractEntity {
 
     private String street;
     private String postalCode;

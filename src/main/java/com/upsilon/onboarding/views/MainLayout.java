@@ -1,12 +1,9 @@
 package com.upsilon.onboarding.views;
 
 
+import com.upsilon.onboarding.views.camera.CameraView;
 import com.upsilon.onboarding.views.about.AboutView;
-import com.upsilon.onboarding.views.addressform.AddressFormView;
-import com.upsilon.onboarding.views.cardlist.CardListView;
-import com.upsilon.onboarding.views.gridwithfilters.GridwithFiltersView;
-import com.upsilon.onboarding.views.imagelist.ImageListView;
-import com.upsilon.onboarding.views.personform.PersonFormView;
+import com.upsilon.onboarding.views.dossier.DossierOverview;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.html.Div;
@@ -50,7 +47,12 @@ public class MainLayout extends AppLayout {
             this.view = view;
             RouterLink link = new RouterLink();
             // Use Lumo classnames for various styling
-            link.addClassNames(Display.FLEX, Gap.XSMALL, Height.MEDIUM, AlignItems.CENTER, Padding.Horizontal.SMALL,
+            link.addClassNames(
+                    Display.FLEX,
+                    Gap.XSMALL,
+                    Height.MEDIUM,
+                    AlignItems.CENTER,
+                    Padding.Horizontal.SMALL,
                     TextColor.BODY);
             link.setRoute(view);
 
@@ -107,15 +109,18 @@ public class MainLayout extends AppLayout {
         return new MenuItemInfo[]{ //
                 new MenuItemInfo("About", LineAwesomeIcon.FILE.create(), AboutView.class), //
 
-                new MenuItemInfo("Card List", LineAwesomeIcon.LIST_SOLID.create(), CardListView.class), //
+//               new MenuItemInfo("Card List", LineAwesomeIcon.LIST_SOLID.create(), CardListView.class), //
+//
+//                new MenuItemInfo("Person Form", LineAwesomeIcon.USER.create(), PersonFormView.class), //
+//
+//                new MenuItemInfo("Address Form", LineAwesomeIcon.MAP_MARKER_SOLID.create(), AddressFormView.class), //
+//
+//                new MenuItemInfo("Image List", LineAwesomeIcon.TH_LIST_SOLID.create(), ImageListView.class), //
+//
+//                new MenuItemInfo("Grid with Filters", LineAwesomeIcon.FILTER_SOLID.create(), GridwithFiltersView.class), //
 
-                new MenuItemInfo("Person Form", LineAwesomeIcon.USER.create(), PersonFormView.class), //
-
-                new MenuItemInfo("Address Form", LineAwesomeIcon.MAP_MARKER_SOLID.create(), AddressFormView.class), //
-
-                new MenuItemInfo("Image List", LineAwesomeIcon.TH_LIST_SOLID.create(), ImageListView.class), //
-
-                new MenuItemInfo("Grid with Filters", LineAwesomeIcon.FILTER_SOLID.create(), GridwithFiltersView.class), //
+                new MenuItemInfo("Dossier Overview", LineAwesomeIcon.BOOK_OPEN_SOLID.create(), DossierOverview.class), //
+                new MenuItemInfo("Camera", LineAwesomeIcon.CAMERA_SOLID.create(), CameraView.class), //
 
         };
     }

@@ -1,4 +1,4 @@
-package com.upsilon.onboarding.views.cardlist;
+package com.upsilon.onboarding.views.personlist;
 
 import com.upsilon.onboarding.views.MainLayout;
 import com.vaadin.flow.component.grid.Grid;

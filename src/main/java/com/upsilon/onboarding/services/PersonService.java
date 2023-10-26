@@ -1,7 +1,7 @@
 package com.upsilon.onboarding.services;
 
-import com.upsilon.onboarding.data.SamplePerson;
-import com.upsilon.onboarding.data.SamplePersonRepository;
+import com.upsilon.onboarding.data.Person;
+import com.upsilon.onboarding.data.PersonRepository;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,19 +9,19 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SamplePersonService {
+public class PersonService {
 
-    private final SamplePersonRepository repository;
+    private final PersonRepository repository;
 
-    public SamplePersonService(SamplePersonRepository repository) {
+    public PersonService(PersonRepository repository) {
         this.repository = repository;
     }
 
-    public Optional<SamplePerson> get(Long id) {
+    public Optional<Person> get(Long id) {
         return repository.findById(id);
     }
 
-    public SamplePerson update(SamplePerson entity) {
+    public Person update(Person entity) {
         return repository.save(entity);
     }
 
@@ -29,11 +29,11 @@ public class SamplePersonService {
         repository.deleteById(id);
     }
 
-    public Page<SamplePerson> list(Pageable pageable) {
+    public Page<Person> list(Pageable pageable) {
         return repository.findAll(pageable);
     }
 
-    public Page<SamplePerson> list(Pageable pageable, Specification<SamplePerson> filter) {
+    public Page<Person> list(Pageable pageable, Specification<Person> filter) {
         return repository.findAll(filter, pageable);
     }
 

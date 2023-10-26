@@ -1,7 +1,7 @@
 package com.upsilon.onboarding.views.addressform;
 
-import com.upsilon.onboarding.data.SampleAddress;
-import com.upsilon.onboarding.services.SampleAddressService;
+import com.upsilon.onboarding.data.Address;
+import com.upsilon.onboarding.services.AddressService;
 import com.upsilon.onboarding.views.MainLayout;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
@@ -30,9 +30,9 @@ public class AddressFormView extends Div {
     private Button cancel = new Button("Cancel");
     private Button save = new Button("Save");
 
-    private Binder<SampleAddress> binder = new Binder<>(SampleAddress.class);
+    private Binder<Address> binder = new Binder<>(Address.class);
 
-    public AddressFormView(SampleAddressService addressService) {
+    public AddressFormView(AddressService addressService) {
         addClassName("address-form-view");
 
         add(createTitle());
@@ -75,7 +75,7 @@ public class AddressFormView extends Div {
     }
 
     private void clearForm() {
-        this.binder.setBean(new SampleAddress());
+        this.binder.setBean(new Address());
     }
 
 }
